@@ -40,4 +40,68 @@ it works. i am amazing.
 ok next one.
 
 
+- - - - - - - - - 
+Engineering Fundamentals
 
+alot of if, elif and else statements because its conditional / decisions 
+
+
+does it move 
+                NO - should it  - YES - industrial glue 
+                                - NO - no problem
+
+                YES - should it - YES - no problem
+                                - NO - tape
+
+it kind of looks like a tree branch/diagram
+i think my first conditional statement is going to be an 'IF', i need parameters now.
+
+i think 'move' and 'should it' be parameters/functions, since both of YES and NO have a 'no problem' in common
+i think in my code i should include an 'AND'
+
+IF move AND should_it:
+    return 'No problem'  
+elif move and not should_it:
+    return 'Tape'
+elif not move and not should_it:
+    return 'No problem'
+else:
+    return 'Industrial glue'
+
+    i know its formatted like this. lets give it a try?
+
+ok the function names are 'moves and should moves' ill change it.
+
+If moves and should_move:
+    return 'No Problem'
+elif moves and not should_move:
+    return "Sticky Tape"
+elif not moves and not should_move:
+    return 'Industrial Glue'
+else: 
+    return "Try again"
+
+i mean it works. 
+
+    um we have an extra challenge. lets cut it down to 3 lines. 
+
+
+    range? we can use that function but i think that function only works 
+
+    OMG  a dictionary. what if i make a dictionary to simplify??? would it work idk maybe its worth trying it out
+
+    um lets see
+     nevermind :( idk how. ill get back to it at the end.
+
+
+
+     - - -- - - -- - 
+
+     LOOPS *
+
+    
+    making a star loop using a FOR loop 
+
+
+    for 
+    
