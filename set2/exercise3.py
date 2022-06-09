@@ -166,7 +166,11 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    square_num = []
+    for i in range(10):
+        square_num.append(range(10))
+    
+    return square_num
 
 
 def loops_5():
@@ -243,6 +247,18 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+
+
+
+
+
+
+
+
+
+
+
+    
     return None
 
 
