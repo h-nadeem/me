@@ -96,8 +96,10 @@ def shout_with_a_number(a_string, a_number):
           challenge, see if you can make the test pass with at least two ways
           of doing the same job.
     """
-    the_answer = shout(a_string) +
+    #the_answer = shout(a_string) +" "+ str(a_number)
+    the_answer = f"{shout(a_string)} {a_number}"
     return the_answer
+
 
 
 """#################################
