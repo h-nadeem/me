@@ -29,6 +29,18 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
+    #def fix_it(moves=True, should_move=True):
+
+    if moves and should_move:
+        return 'No Problem'
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif not moves and not should_move:
+        return 'WD-40'
+    else: 
+        return "Try again"
+
+    
     return None
 
 
@@ -52,7 +64,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    list_stars = []
+    for i in range(10):
+        list_stars.append("*")
+    return list_stars
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -65,6 +80,12 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
+    list_of_items = []
+    for i in range(number_of_items):
+        list_of_items.append(symbol)
+    return list_of_items
+
+
     return None
 
 
@@ -86,7 +107,12 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+
+    star_map = []
+    for k in range(10):
+        star_map.append(loops_1c(number_of_items=10, symbol="*"))
+
+    return star_map
 
 
 def loops_3():
@@ -110,6 +136,16 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+    square = []
+    for i in range(10):
+        row = []
+        for k in range(10):
+            row.append(str(i))
+        square.append(row)
+    return square
+
+
+
     return None
 
 
