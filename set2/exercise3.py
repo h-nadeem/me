@@ -4,7 +4,6 @@
 
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
-
     Look into modulo division using the '%' operator as one way of doing this.
 
     e.g. 4 % 2 = 0
@@ -13,8 +12,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
-
+    return(bool(a_number % 2 != 0))
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
