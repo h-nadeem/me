@@ -2,6 +2,9 @@
 """Modify each function until the tests pass."""
 
 
+from ast import While
+
+
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
     Look into modulo division using the '%' operator as one way of doing this.
@@ -86,9 +89,6 @@ def loops_1c(number_of_items=5, symbol="#"):
     return list_of_items
 
 
-    return None
-
-
 def loops_2():
     """Make a big square starfield.
 
@@ -111,7 +111,6 @@ def loops_2():
     star_map = []
     for k in range(10):
         star_map.append(loops_1c(number_of_items=10, symbol="*"))
-
     return star_map
 
 
@@ -144,11 +143,6 @@ def loops_3():
         square.append(row)
     return square
 
-
-
-    return None
-
-
 def loops_4():
     """Make a block of numbers that rises left to right.
 
@@ -166,12 +160,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    square_num = []
-    for i in range(10):
-        square_num.append(range(10))
-    
-    return square_num
-
+  
 
 def loops_5():
     """Make the coordinates of the block.
@@ -200,7 +189,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+  #  n_square = []
+  #  for i in range(10):
+ #       coordinate_row = []
+ #       for j in range(5):
+ #           coordinate_row.append('(i{}, j{})'.format(i,j))
+ #       n_square.append(coordinate_row)
+ #   print(n_square)
 
 
 def loops_6():
@@ -223,9 +218,14 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
-
-
+    wedges = []
+    for i in range(10):
+        row = []
+        for j in range(i+1)
+            row.append(j)
+        wedges.append(row)
+    return wedges
+  
 def loops_7():
     """Make a pyramid.
 
@@ -247,6 +247,8 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+   
+  
 
 
 
@@ -256,10 +258,6 @@ def loops_7():
 
 
 
-
-
-    
-    return None
 
 
 def little_printer(some_kind_of_list, exercise_name):

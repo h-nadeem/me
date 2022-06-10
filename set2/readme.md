@@ -17,7 +17,8 @@ ______________________________________________________________________
 Vocabulary 
 Calling - calls the function 
 float - anything with a decimal
-
+if - conditional 
+for, while, repeat until - loops?
 - - - - - - - - - 
 Exercise 3
 odd - true or false
@@ -85,7 +86,6 @@ i mean it works.
 
     um we have an extra challenge. lets cut it down to 3 lines. 
 
-
     range? we can use that function but i think that function only works 
 
     OMG  a dictionary. what if i make a dictionary to simplify??? would it work idk maybe its worth trying it out
@@ -97,9 +97,7 @@ i mean it works.
 
      - - -- - - -- - 
 
-     LOOPS 
-
-     pyramid 
+     LOOPS - pyramid of stars
 
      hm ok 
 
@@ -123,3 +121,74 @@ k = 0
 for i in range(1, rows+1):
     for space in range(1, (rows - i) +1):
     return(end= '')
+
+    um WHAT 
+
+for i in range(5):
+    for s in range(-6, -i):
+        print(" ", end="")
+    for j in range(i+1):
+        print("* ", end="")
+    print()
+
+    maybe? i4ehr84ur3[1n9cj
+     im going to $£^%*&
+
+
+     let me start over fresh.
+    i will equal 0 and j will equal lets say 5.
+
+   i = 0
+   j = 5
+    WHILE i < 5 :
+    print ( " "*((j-1)*2) + '* '*((i*2)+1))
+
+    i += 1
+    j -= 1
+
+    lets try. didnt work. 
+
+    n = []
+    for i in range(n):
+        print( " "*(n-i-1) + "*"*(2*i+1) )
+    return n
+
+             i  line:      "       **************"
+      *        0  [1:][:7]    [      *]
+     ***       1  [2:][:8]     [     ***]
+    *****      2  [3:][:9]      [    *****]
+   *******     3  [4:][:10]      [   *******]
+  *********    4  [5:][:11]       [  *********]
+ ***********   5  [6:][:12]        [ ***********]
+*************  6  [7:][:13]         [*************]
+
+
+            leading  stars    total
+                 spaces   count    length
+                          (2i+1)   (n+i)
+      *            6       1       7  = n+0
+     ***           5       3       8  = n+1
+    *****          4       5       9  = n+2
+   *******         3       7       10 = n+3
+  *********        2       9       11 = n+4
+ ***********       1       11      12 = n+5
+*************      0       13      13 = n+6
+
+x=8
+for i in range(1,x):
+    print((' '*(x-i))+('*'*i)+('*'*(i-1)))
+
+    return x?
+    return
+
+    n=7
+pyramid = [f"{'*'*(2*i+1):>{n+i}}" for i in range(n)] # list of lines
+print(*pyramid,sep="\n")  
+HUH
+
+n = []
+pyramid = 
+
+
+how do i return this?!
+
