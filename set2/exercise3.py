@@ -3,6 +3,7 @@
 
 
 from ast import While
+from re import M
 
 
 def is_odd(a_number):
@@ -35,11 +36,11 @@ def fix_it(moves=True, should_move=True):
     #def fix_it(moves=True, should_move=True):
 
     if moves and should_move:
-        return 'No Problem'
+        return "No Problem"
     elif moves and not should_move:
         return "Duct Tape"
-    elif not moves and not should_move:
-        return 'WD-40'
+    elif not moves and should_move:
+        return "WD-40"
     else: 
         return "Try again"
 
@@ -135,16 +136,17 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    square = []
+    numsquare = []
     for i in range(10):
         row = []
         for k in range(10):
             row.append(str(i))
-        square.append(row)
-    return square
+        numsquare.append(row)
+    return numsquare
 
 def loops_4():
     """Make a block of numbers that rises left to right.
+    
 
     Return this:
     [
@@ -160,6 +162,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+    numsquare = []
+    for i in range(10):
+        row = []
+        for k in range(10):
+            row.append(str(k))
+        numsquare.append(row)
+    return numsquare
   
 
 def loops_5():
@@ -189,14 +198,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-  #  n_square = []
-  #  for i in range(10):
- #       coordinate_row = []
- #       for j in range(5):
- #           coordinate_row.append('(i{}, j{})'.format(i,j))
- #       n_square.append(coordinate_row)
- #   print(n_square)
-
+    num_square = []
+    for i in range(10):
+        coordinates_row = []
+        for j in range(5):
+            coordinates_row.append('(i{}, j{})'.format(i, j))
+        num_square.append(coordinates_row)
+    return(num_square) #return not print 
 
 def loops_6():
     """Make a wedge of numbers.
@@ -218,13 +226,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    wedges = []
-    for i in range(10):
-        row = []
-        for j in range(i+1)
-            row.append(j)
-        wedges.append(row)
-    return wedges
+    the_wedges = []
+    for k in range(10):
+        num_row = []
+        for j in range(k + 1):
+            num_row.append(j)
+        the_wedges.append(num_row)
+    return the_wedges
   
 def loops_7():
     """Make a pyramid.
@@ -247,8 +255,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-   
-  
+
+
+
+
 
 
 
