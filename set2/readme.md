@@ -156,7 +156,7 @@ for i in range(5):
 
 
     n = 5
-for i in range(n):
+    for i in range(n):
     for j in range(n - i - 1):
         print(' ', end='')
     for k in range(2 * i + 1):
@@ -202,8 +202,14 @@ how do i return this?!
     print(*pyramid,sep="\n") 
 
     n = []
-    
 
+
+
+j = 10
+    j  = j-1
+    for i in range(1, 10, 2):
+    
+        return(j*' '+i*'*')
 
     num_square = []
     for i in range(10):
@@ -214,5 +220,14 @@ how do i return this?!
     return(num_square)
 
 
+    ok i need to append.
 
-    python ../course/set2/tests.py
+    
+
+
+    ______________________________________________________
+
+    the wedges wont work.
+
+    im going to go into the test file and work my way backwards.
+    ok it works now.

@@ -42,7 +42,7 @@ def fix_it(moves=True, should_move=True):
     elif not moves and should_move:
         return "WD-40"
     else: 
-        return "Try again"
+        return "No Problem"
 
     
     return None
@@ -207,6 +207,16 @@ def loops_5():
     return(num_square) #return not print 
 
 def loops_6():
+
+    the_wedge = []
+    
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(str(j))
+        the_wedge.append(row)
+    return the_wedge
+
     """Make a wedge of numbers.
 
     Return this:
@@ -226,15 +236,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    the_wedges = []
-
-    for i in range(10):
-        num_row = []
-        for j in range(i + 1):
-            num_row.append(j)
-        the_wedges.append(num_row)
-    return(the_wedges)
-  
+      
 def loops_7():
     """Make a pyramid.
 
@@ -256,13 +258,15 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+    pyramid_loop = [] 
+    j = 10
+    for i in range(1, 10,2):
+        pyramid_loop.append(j*' '+i*'*')
+        j = j - 1
+    return pyramid_loop
 
 
-
-
-
-
-
+   
 
 
 
@@ -311,5 +315,6 @@ if __name__ == "__main__":
     little_printer(loops_3(), "loops_3")
     little_printer(loops_4(), "loops_4")
     little_printer(loops_5(), "loops_5")
+    
     little_printer(loops_6(), "loops_6")
     little_printer(loops_7(), "loops_7")
