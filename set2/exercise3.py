@@ -227,12 +227,13 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     the_wedges = []
-    for k in range(10):
+
+    for i in range(10):
         num_row = []
-        for j in range(k + 1):
+        for j in range(i + 1):
             num_row.append(j)
         the_wedges.append(num_row)
-    return the_wedges
+    return(the_wedges)
   
 def loops_7():
     """Make a pyramid.

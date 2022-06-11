@@ -153,6 +153,16 @@ for i in range(5):
         print( " "*(n-i-1) + "*"*(2*i+1) )
     return n
 
+
+
+    n = 5
+for i in range(n):
+    for j in range(n - i - 1):
+        print(' ', end='')
+    for k in range(2 * i + 1):
+        print('*', end='')
+    print()
+
              i  line:      "       **************"
       *        0  [1:][:7]    [      *]
      ***       1  [2:][:8]     [     ***]
@@ -185,10 +195,24 @@ for i in range(1,x):
 pyramid = [f"{'*'*(2*i+1):>{n+i}}" for i in range(n)] # list of lines
 print(*pyramid,sep="\n")  
 HUH
-
-n = []
-pyramid = 
-
-
 how do i return this?!
 
+    n=7
+    pyramid = [f"{'*'*(2*i+1):>{n+i}}" for i in range(n)] # list of lines
+    print(*pyramid,sep="\n") 
+
+    n = []
+    
+
+
+    num_square = []
+    for i in range(10):
+        coordinates_row = []
+        for j in range(5):
+            coordinates_row.append('(i{}, j{})'.format(i, j))
+        num_square.append(coordinates_row)
+    return(num_square)
+
+
+
+    python ../course/set2/tests.py

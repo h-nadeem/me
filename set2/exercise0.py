@@ -3,8 +3,8 @@
 
 The command to run the tests is:
 
-python ../course/set2/tests.py
 
+python ../course/set2/tests.py
 
 In each function, where you see:
 
