@@ -18,7 +18,7 @@ Vocabulary
 Calling - calls the function 
 float - anything with a decimal
 if - conditional 
-for, while, repeat until - loops?
+for, while, repeat until - loops
 - - - - - - - - - 
 Exercise 3
 odd - true or false

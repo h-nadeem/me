@@ -16,7 +16,8 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return(bool(a_number % 2 != 0))
+    return bool(a_number % 2 != 0)
+
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -33,7 +34,7 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    #def fix_it(moves=True, should_move=True):
+    # def fix_it(moves=True, should_move=True):
 
     if moves and should_move:
         return "No Problem"
@@ -41,10 +42,9 @@ def fix_it(moves=True, should_move=True):
         return "Duct Tape"
     elif not moves and should_move:
         return "WD-40"
-    else: 
+    else:
         return "No Problem"
 
-    
     return None
 
 
@@ -144,9 +144,10 @@ def loops_3():
         numsquare.append(row)
     return numsquare
 
+
 def loops_4():
     """Make a block of numbers that rises left to right.
-    
+
 
     Return this:
     [
@@ -169,7 +170,7 @@ def loops_4():
             row.append(str(k))
         numsquare.append(row)
     return numsquare
-  
+
 
 def loops_5():
     """Make the coordinates of the block.
@@ -202,14 +203,15 @@ def loops_5():
     for i in range(10):
         coordinates_row = []
         for j in range(5):
-            coordinates_row.append('(i{}, j{})'.format(i, j))
+            coordinates_row.append("(i{}, j{})".format(i, j))
         num_square.append(coordinates_row)
-    return(num_square) #return not print 
+    return num_square  # return not print
+
 
 def loops_6():
 
     the_wedge = []
-    
+
     for i in range(10):
         row = []
         for j in range(i + 1):
@@ -236,7 +238,8 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-      
+
+
 def loops_7():
     """Make a pyramid.
 
@@ -258,21 +261,12 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pyramid_loop = [] 
-    j = 10
-    for i in range(1, 10,2):
-        pyramid_loop.append(j*' '+i*'*')
-        j = j - 1
+    pyramid_loop = []
+    j = 4
+    for i in range(1, 10, 2):
+        pyramid_loop.append(list(j * " " + i * "*" + j * " "))
+        j -= 1  # j = j - 1
     return pyramid_loop
-
-
-   
-
-
-
-
-
-
 
 
 def little_printer(some_kind_of_list, exercise_name):
@@ -315,6 +309,6 @@ if __name__ == "__main__":
     little_printer(loops_3(), "loops_3")
     little_printer(loops_4(), "loops_4")
     little_printer(loops_5(), "loops_5")
-    
+
     little_printer(loops_6(), "loops_6")
     little_printer(loops_7(), "loops_7")
