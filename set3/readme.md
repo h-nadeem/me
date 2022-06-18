@@ -7,7 +7,6 @@ Useful Info:
 searches - binary and linear searches.
 binary - more efficient and faster, keeps cutting code in half until the number is found
 linear - more time consuming, (e.g. goes through EVERY number in the list until the number is found)
-
 range() - is a function, returns sequence of numbers, starts from 0, increments 1, and stops at a number (specified)
 code errors: Logic, syntax, runtime
 loops: while, for, repeat until
@@ -39,6 +38,7 @@ LOGS
 
     L2:
     . increment by 2 using range (do it from scratch and one using l1)
+    DONE
 
     L3:
     . OHHHHH YES finally inputs
@@ -62,4 +62,70 @@ LOGS
 
     _______________________________________________________________________________________________________
 
-# Tuesday
+# Thursday
+
+    I lost motivation for this right now, so ill try my best to come up with some codes
+
+     incrementing by 2
+    my_list = [1,2,3,4,5,6,7,8,9,10]
+    for x in my_list[1::2]:
+    print (x)
+    i need to use a range function, so lets do that
+
+    for i in range(2, 22, 2):
+    print(i, end=' ')
+
+    alright it should work but, there are no integers, soo lets replace the numbers with 'start and stop'
+
+
+    my_range = []
+
+    for i in range(start, stop, 2):
+        my_range.append(i)
+
+    return my_range
+
+    done!!
+
+    ________________________________________________________________________________________________________
+
+# Friday
+
+    Let's try this again. well, start and finish it tonight. let me get my music first (louis armstrong)
+
+    exercise 4:
+
+    5:07 PM - binary searches (reading what i have to do)
+
+    5:15 PM - crying break
+
+    5:17 PM - okay so we have 3 main variable names: low, high, actual_number
+
+    and we have tries & guess here
+
+    tries = 0
+    guess = 0
+
+    dictionary, and the algorithm HAS to return this:
+
+# {"guess": guess, "tries": tries}
+
+    and we do a binary search for the ....guessed number? um
+
+    1. range to guess inside
+    2. binary search the actual number
+
+    um ok first im going to write a pseudocode for a binary search to make things a bit more clear, and then im going to make a guessing range and then work it out & merge it together with the names. sounds like a solidish plan.
+
+    5:24 PM - dinner brb
+
+# Saturday
+
+    12:27 PM finished the exercise 1 in 20 minutes (new record). ik its not about speed, but im a competitive person, new record anyways.
+
+    the super asker kind of got scary, but after going through it, it was not hard it was the easiest because i just had to combine both of my codes together.
+    i kind of wanted to make it simpler but ik future me wont get the simple version, so this time i extended it so it would be easier for me to understand.
+
+    i now know what value errors, keyboard errors are, what exception is and im getting good at looping. finally.
+
+    12:30, lets work on the binary search (last one!)

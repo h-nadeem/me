@@ -4,7 +4,7 @@ try:
     a = 1 / 0  # <-- with throw a ZeroDivisionError
 except ZeroDivisionError as ze:
     print("I know your game", ze)
-except IndexError as ie:
+except IndexError as ie:  # code trying to reach an invalid index/is out of range
     print("I know your library card number!", ie)
 except Exception as e:
     print("Generic error, this will catch everything", e)
