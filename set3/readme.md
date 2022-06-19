@@ -15,6 +15,7 @@ f strings = simplifying strings with 'f'
 code golf = use it to help make your code more efficient/least number of lines
 append = adding to a list
 debugging = when trying to figure out how to debug your work, run the debugging file.
+bubble sort = HAHAHA I had to watch the hungarian folk dance on youtube to get it
 
 ---
 
@@ -128,4 +129,109 @@ LOGS
 
     i now know what value errors, keyboard errors are, what exception is and im getting good at looping. finally.
 
-    12:30, lets work on the binary search (last one!)
+    12:30, lets work on the binary search and then the guessing game! (last two!)
+
+    while loop
+
+    while low <= high
+        middle = low/high / 2
+        if target = array(middle) then
+        found = true
+
+    1. choose a range
+    2. guess the number in the range
+    3. number of tries of guessing
+    4. return number of tries, guesses, and actual number
+
+
+    print("Guess a number between 1 & 100!")
+    actual_number = random.randint(1, 100)
+    tries = 0  #  tries to guess the number
+    guess = 0
+    while guess != actual_number:
+        guess = eval(input("Guess a number: "))
+        tries += 1
+        if guess == actual_number:
+            print("thats right! you used", tries, "attempts!")
+            break
+        elif guess < actual_number:
+            print("go higher!")
+        else:
+            print("go lower!")
+
+    return {"guess": guess, "tries": tries}
+
+---
+
+OKAY lets start again
+print(
+"Guess a number between {low} and {high}".format(
+low=low, high=high, actual_number=actual_number
+)
+)
+actual_number = random.randint(low, high) --> we dont need this beecause the test will have one generated, right? hmm lets check
+
+    tries = 0
+    guess = 0
+
+    while guess != actual_number:
+        guess = input("Enter an integer: ")
+        tries += 1
+        try:
+            integer = int(guess)
+            if integer == actual_number:
+                print("u got the number my g")
+                return {"guess": guess, "tries": tries}
+            elif integer < actual_number:
+                print("go higher")
+            elif integer > actual_number:
+                print("go lower")
+        except ValueError:
+            print("you cant outsmart me, enter a valid integer")
+
+....
+print("Guess a number between {low} and {high}".format(low=low, high=high))
+
+    tries = 0
+    guess = 0
+
+    while guess != actual_number:
+        guess = input("Enter an integer: ")
+        tries += 1
+        try:
+            integer = int(guess)
+            if integer == actual_number:
+                print("u got the number")
+                return {"guess": guess, "tries": tries}
+            elif integer < actual_number:
+                print("go higher")
+            elif integer > actual_number:
+                print("go lower")
+        except ValueError:
+            print("enter a valid integer")
+
+tries = 0
+def binarysearch((numlist= low, high), target):
+global tries
+if len(numlist) == 0:
+print("The target is not in this list.")
+else:
+midpoint_index = len(numlist) // 2
+if numlist[midpoint_index] == target:
+num_tries += 1
+print("The target", target, "was found in", tries, "guesses.")
+elif numlist[midpoint_index] < target:
+num_tries += 1
+print("Guess: ", numlist[midpoint_index], "is too low")
+return binarysearch(numlist[midpoint_index + 1:], target)
+elif numlist[midpoint_index] > target:
+num_tries += 1
+print("Guess: ", numlist[midpoint_index], "is too high")
+return binarysearch(numlist[:midpoint_index], target)
+
+def listmaker(min, max):
+'''Simple ordered numbers list maker'''
+alist = []
+for x in range(min, max):
+alist.append(x)
+return alist
