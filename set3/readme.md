@@ -210,6 +210,7 @@ print("Guess a number between {low} and {high}".format(low=low, high=high))
         except ValueError:
             print("enter a valid integer")
 
+---- code by some dude
 tries = 0
 def binarysearch((numlist= low, high), target):
 global tries
@@ -235,3 +236,7 @@ alist = []
 for x in range(min, max):
 alist.append(x)
 return alist
+
+---
+
+why doesnt it work??
