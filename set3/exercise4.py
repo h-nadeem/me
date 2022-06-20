@@ -36,12 +36,14 @@ def binary_search(low, high, actual_number):
                     f"you got it!. The number is {actual_number}, it took you {tries} tries!"
                 )
                 return {"guess": guess, "tries": tries}
-            elif guess < actual_number:
-                high = mid
-                print("go higher!")
             elif guess > actual_number:
                 low = mid
                 print("go lower!")
+
+            elif guess < actual_number:
+                high = mid
+                print("go higher!")
+
         except ValueError:
             print("you can't outsmart me, enter a valid integer")
 
