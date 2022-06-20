@@ -21,29 +21,25 @@ def binary_search(low, high, actual_number):
     Use the VS Code debugging tools a lot here. It'll make understanding
     things much easier.
     """
-    print(
-        f"Welcome! Guess a number between {low} and {high}!".format(low=low, high=high)
-    )
+    #    print(f"Welcome! Guess a number between {low} and {high}!".format(low=low, high=high))
 
     tries = 0
     guess = 0
 
     while guess != actual_number:
-        guess = input("enter a number: ")
         print(f"your guess was {guess}")
         tries += 1
         try:
-            integer = int(guess)
             mid = (low - high) / 2 + high
-            if integer == actual_number:
+            if guess == actual_number:
                 print(
                     f"you got it!. The number is {actual_number}, it took you {tries} tries!"
                 )
                 return {"guess": guess, "tries": tries}
-            elif integer < actual_number:
+            elif guess < actual_number:
                 high = mid
                 print("go higher!")
-            elif integer > actual_number:
+            elif guess > actual_number:
                 low = mid
                 print("go lower!")
         except ValueError:
