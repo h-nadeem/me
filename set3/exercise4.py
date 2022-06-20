@@ -24,28 +24,22 @@ def binary_search(low, high, actual_number):
     #    print(f"Welcome! Guess a number between {low} and {high}!".format(low=low, high=high))
 
     tries = 0
-    guess = 0
 
-    while guess != actual_number:
+    while True:
+        guess = int((low - high) / 2 + high)
         print(f"your guess was {guess}")
+
+        if guess == actual_number:
+            print(
+                f"you got it!. The number is {actual_number}, it took you {tries} tries!"
+            )
+            return {"guess": guess, "tries": tries}
+        elif guess > actual_number:
+            high = guess
+        elif guess < actual_number:
+            low = guess
+
         tries += 1
-        try:
-            mid = (low - high) / 2 + high
-            if guess == actual_number:
-                print(
-                    f"you got it!. The number is {actual_number}, it took you {tries} tries!"
-                )
-                return {"guess": guess, "tries": tries}
-            elif guess > actual_number:
-                low = mid
-                print("go lower!")
-
-            elif guess < actual_number:
-                high = mid
-                print("go higher!")
-
-        except ValueError:
-            print("you can't outsmart me, enter a valid integer")
 
 
 if __name__ == "__main__":
