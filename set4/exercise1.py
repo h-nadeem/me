@@ -37,10 +37,37 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
-    json_data = open(LOCAL + "/lazyduck.json").read()
 
-    data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    # json_data = open(LOCAL + "/lazyduck.json").read()
+    # data = json.loads(json_data)
+    # ivalue = data["results"][0]["id"]["value"]
+    # id1 = data["results"][0]["id"]
+    # ps = data["results"][0]["location"]["postcode"
+    #
+    # file
+    json_data = open(LOCAL + "/lazyduck.json").read()  # reading the file
+    data = json.loads(json_data)  # loading the data
+    #  print(data.get("results"))  # access from dictionary - use .get
+
+    lastname = data.get("results")[0].get("name").get("last")
+    print(lastname)
+
+    password = data.get("results")[0].get("login").get("password")
+    print(password)
+    #  print(json_data)
+
+    postcode = data.get("results")[0].get("location").get("postcode")
+
+    idvalue = data.get("results")[0].get("id").get("value")
+    print(postcode)
+    print(idvalue)
+    postcodePlusID = int(idvalue) + postcode
+
+    return {
+        "lastName": lastname,
+        "password": password,
+        "postcodePlusID": postcodePlusID,
+    }  # ps + id1
 
 
 def wordy_pyramid():
@@ -96,13 +123,34 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    id = 5
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
+    tallest = 0
+    pokemon_tallest = {"name": "x", "weight": "y", "height": "z"}
 
-    return {"name": None, "weight": None, "height": None}
+    i = low
+    while low < high:
+
+        url = f"https://pokeapi.co/api/v2/pokemon/{low}"  # 5
+        r = requests.get(url)
+
+        if r.status_code is 200:
+            the_json = json.loads(r.text)
+        #   print(the_json)
+
+        name = the_json.get("name")
+        weight = the_json.get("weight")
+        height = the_json.get("height")
+
+        if height > tallest:
+            tallest = height
+            pokemon_tallest.update({"name": name, "weight": weight, "height": height})
+
+        low += 1
+
+    return {
+        "name": pokemon_tallest.get("name"),
+        "weight": pokemon_tallest.get("weight"),
+        "height": pokemon_tallest.get("height"),
+    }
 
 
 def diarist():
@@ -122,6 +170,7 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
+
     pass
 
 
