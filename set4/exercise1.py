@@ -50,7 +50,7 @@ def get_some_details():
     #  print(data.get("results"))  # access from dictionary - use .get
 
     lastname = data.get("results")[0].get("name").get("last")
-    print(lastname)
+    print(lastname)  # zero bc we're accessing the first element
 
     password = data.get("results")[0].get("login").get("password")
     print(password)
