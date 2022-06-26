@@ -33,6 +33,15 @@ i could add data into the sheets,
 
 Is there a relationship between playing chess and solving problems involving patterns?
 
+okay so i found a data set
+
+https://www.kaggle.com/datasets/datasnaek/chess
+
+it talks about game ids, rates, start time/end time, number of turns, game status, winner, time increment, white player id, white player rating, black player id, black player rating, moves in standard chess notation
+opening names, opening ply, opening eco,
+
+i might add: blunders, inaccuracies, etc
+
 ---
 
 EXERCISES
@@ -63,3 +72,50 @@ assumed if it's omitted."
     mode r+ = reading and writing
 
 always CLOSE file when done
+
+list = [ 1,2,3,4,5,6,7,8,9]
+
+to take things out of a list
+
+x = list[0]
+x = akasha
+
+DICTIONARIES ARE PAIRS
+
+dictionary = {key:value, key:pair}
+dictionary = {name: akasha}
+
+accessing dictionaries:
+x = dict[name]
+x = akasha
+
+JSON - FILE TYPE
+
+exercise 1
+
+results {json file}
+
+key value pair
+
+1. {results: [list],
+2. info: {}
+
+x = resul
+
+file = {results: [], info: {} }
+x = file ["results"]
+x = going to print (results) ->[]
+
+    inside x
+    [{}]
+
+    x[0] = {gender }
+
+file
+open["filename"]
+
+access from dictionary = .get
+
+e,g, print(data.get("results"))
+
+variable = d.get("variable")
