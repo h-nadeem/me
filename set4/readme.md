@@ -73,34 +73,43 @@ assumed if it's omitted."
 
 always CLOSE file when done
 
-list = [ 1,2,3,4,5,6,7,8,9]
+---
+
+ok lets figure out how to do these
+
+this is a list = [ 1,2,3,4,5,6,7,8,9]
+
+e.g.
+example = [1,2,3,4,5]
 
 to take things out of a list
 
-x = list[0]
-x = akasha
+x = example[0]
+x will return 1
+
+lists done!
+
+now dictionaries
+
+json is a file type. and always formatted in dictionaries, and its a nested dictionary (dictionary within a dictionary)
 
 DICTIONARIES ARE PAIRS
 
 dictionary = {key:value, key:pair}
-dictionary = {name: akasha}
+dictionary_example = {name:akasha}
 
 accessing dictionaries:
-x = dict[name]
-x = akasha
-
-JSON - FILE TYPE
+x = dictionary_example[name]
+x will return akasha
 
 exercise 1
 
 results {json file}
 
-key value pair
+inside json file is:
 
 1. {results: [list],
 2. info: {}
-
-x = resul
 
 file = {results: [], info: {} }
 x = file ["results"]

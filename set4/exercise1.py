@@ -112,21 +112,18 @@ def wordy_pyramid():
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
         wordresponse = requests.get(url)
         word = wordresponse.text
-        print(word)
         pyramid.append(word)
 
     if i == 20:
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
         wordresponse = requests.get(url)
         word = wordresponse.text
-        print(word)
         pyramid.append(word)
     else:
         for k in range(20, 3, -2):
             url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={k}"
             wordresponse = requests.get(url)
             word = wordresponse.text
-            print(word)
             pyramid.append(word)
 
     #  for j in range(3, 20, 2):
@@ -200,6 +197,14 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
+    # READING DATA
+    gcode_data = open(LOCAL + "/Trispokedovetiles(laser).gcode").read()
+
+    # count the number of times laser is turned off and on
+    # command m10 p1
+
+    # write the answer (a number) to a file called 'lasers.pew' in set 4
+    # create a file then
 
     pass
 
