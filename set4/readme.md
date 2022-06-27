@@ -128,3 +128,17 @@ access from dictionary = .get
 e,g, print(data.get("results"))
 
 variable = d.get("variable")
+
+diarist
+
+def be_cool_for_ever(name, file_path):
+"""Save a message about being cool for ever."""
+mode = "w" # from the docs
+history_book = open(file_path, mode)
+history_book.write(f"{name} is cool")
+history_book.close()
+
+# look up what '..' means
+
+be_cool_for_ever("Ben", "../ben_is_cool.txt")
+be_cool_for_ever("Ben", "ben_is_cool.lol_UR_joking")

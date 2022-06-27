@@ -197,14 +197,20 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    # READING DATA
-    gcode_data = open(LOCAL + "/Trispokedovetiles(laser).gcode").read()
+    # READ INTO A FILE AND STORE CONTENT AS LIST
+    file = open("c:/Users/Nadeem/code1161/me/set4/Trispokedovetiles(laser).gcode", "r")
+    data = file.read()
+    print(data)
+    time = data.count("M10 P1")
+    print(time)
+    name = "lasers.pew"
+    file_path = "c:/Users/Nadeem/code1161/me/set4/lasers.pew"
+    # f = open(file_path, "x")
+    with open(file_path, "w") as f:
+        f.write(f"{time}")
 
-    # count the number of times laser is turned off and on
-    # command m10 p1
-
-    # write the answer (a number) to a file called 'lasers.pew' in set 4
-    # create a file then
+    # with open("c:/Users/Nadeem/code1161/me/set4/laser.pew", "w") as f:
+    #    f.write(f"{time}")
 
     pass
 
