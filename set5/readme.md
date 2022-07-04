@@ -35,3 +35,9 @@ print("done")
 ]
 
 Spreadsheet of csv file will load
+
+To access rows - ilock property, [1] not [0]
+
+.sample(number) - any random rows
+
+read this: https://tryolabs.com/blog/2017/03/16/pandas-seaborn-a-guide-to-handle-visualize-data-elegantly
