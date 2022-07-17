@@ -41,3 +41,29 @@ To access rows - ilock property, [1] not [0]
 .sample(number) - any random rows
 
 read this: https://tryolabs.com/blog/2017/03/16/pandas-seaborn-a-guide-to-handle-visualize-data-elegantly
+
+---
+
+Exercises 5.2
+
+Italian dinner
+
+        1.  they start with an axiom, which is given of the formal system;
+        2.  there are a set of statements inthe formal system which can be
+            thought of as theroums of the system; and
+        3.  there are a set of rules for transforming any statement which is
+            part of the formal system into any other using replacement rules.
+    In the itallian dinner, teh axiom is of course _tomatoes_
+
+axiom = _tomatoes_
+
+_tomatoes_
+
+parts = axiom.split(" ")
+result = list(map(italian_rules, parts))
+new_string = " ".join(result)
+guard -= 1
+if guard > 0:
+return italian_dinner(new_string, guard)
+else:
+return new_string
