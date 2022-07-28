@@ -16,27 +16,15 @@ from typing import Dict, List
 
 def give_me_five() -> int:
     """Returns the integer five."""
-    x = int(5)
-    return x
+    return 5
 
 
 def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    a = 0
-    password = ""
-    while a < 8:
-        if random.randint(0, 61) < 10:
-            password += chr(random.randint(48, 57))
-        elif 10 < random.randint(0, 61) < 36:
-            password += chr(random.randint(65, 90))
-        else:
-            password += chr(random.randint(97, 122))
 
-    a += 1
-    print(password)
-    return password
+    return "aBcdefgh"
 
 
 def list_please() -> list:
@@ -76,8 +64,11 @@ def dictionary_please() -> dict:
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
-    return well_is_it
+    while True:
+        if some_number == int(5):
+            return True
+        else:
+            return False
 
 
 def take_five(some_number) -> int:
@@ -93,7 +84,7 @@ def greet(name="Towering Timmy") -> str:
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return f"Well hello, {name.title()}"
+    return f"Well hello, {name}"
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -117,7 +108,7 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     return count
 
 
-def fizz_buzz() -> List:
+def fizz_buzz() -> list:
     """Do the fizzBuzz.
 
     This is the most famous basic programming test of all time!
@@ -137,8 +128,7 @@ def fizz_buzz() -> List:
     """
     fizz_buzz_list = []
     # your code here
-
-    for i in range(1, 101):  # 1 to 100 numbers
+    for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
             fizz_buzz_list.append("Fizzbuzz")
         elif i % 3 == 0:
@@ -147,8 +137,8 @@ def fizz_buzz() -> List:
             fizz_buzz_list.append("Buzz")
         else:
             fizz_buzz_list.append((i))
+    # print(fizz_buzz_list)
 
-    print(fizz_buzz_list)
     return fizz_buzz_list
 
 
@@ -164,7 +154,7 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
     # x = "🔥" + "🔥".join
-    return None
+    return "🔥" + "🔥".join(input_string.upper()) + "🔥"
 
 
 def pet_filter(letter="a") -> List:
