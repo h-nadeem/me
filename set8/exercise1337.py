@@ -130,7 +130,7 @@ def fizz_buzz() -> list:
     # your code here
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
-            fizz_buzz_list.append("Fizzbuzz")
+            fizz_buzz_list.append("FizzBuzz")
         elif i % 3 == 0:
             fizz_buzz_list.append("Fizz")
         elif i % 5 == 0:
@@ -213,20 +213,19 @@ def make_filler_text_dictionary() -> Dict:
     (i.e. 3, 4, 5, 6, 7 and 4 words for each)
     TIP: you'll need the requests library
     """
-    i = 3
 
-    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
-
-    wd = {3: "a", 4: "b", 5: "c", 6: "d", 7: "e"}
-
-    while i == 3:
-        
-   
-
-
-
+    wd = {}
+    for low in range(3,8):
+        url = f'https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={low}'
+        r = requests.get(url)
+        list_words = []
+        for x in range(4):
+            word = r.text
+            list_words.append(word)
+        wd[low] = list_words
     return wd
-
+    
+   
 
 def random_filler_text(number_of_words=200) -> str:
     """Make a paragraph of random filler text.
