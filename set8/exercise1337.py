@@ -16,18 +16,32 @@ from typing import Dict, List
 
 def give_me_five() -> int:
     """Returns the integer five."""
-    return None
+    x = int(5)
+    return x
 
 
 def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    return None
+    a = 0
+    password = ""
+    while a < 8:
+        if random.randint(0, 61) < 10:
+            password += chr(random.randint(48, 57))
+        elif 10 < random.randint(0, 61) < 36:
+            password += chr(random.randint(65, 90))
+        else:
+            password += chr(random.randint(97, 122))
+
+    a += 1
+    print(password)
+    return password
 
 
 def list_please() -> list:
     """Returns a list, you can put anything in the list."""
+
     return None
 
 

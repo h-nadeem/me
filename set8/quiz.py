@@ -11,12 +11,17 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
+
     return None
 
 
 def list_please() -> list:
     """Returns a list, anything you like."""
-    return None
+    list = []
+    for i in range(1, 10):
+        list.append(i)
+    print(list)
+    return list
 
 
 def dictionary_please() -> dict:
