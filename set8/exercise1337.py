@@ -226,7 +226,6 @@ def make_filler_text_dictionary() -> Dict:
     return wd
     
    
-
 def random_filler_text(number_of_words=200) -> str:
     """Make a paragraph of random filler text.
     Using the dictionary returned by make_filler_text_dictionary, make a
@@ -241,6 +240,12 @@ def random_filler_text(number_of_words=200) -> str:
     my_dict = make_filler_text_dictionary()
 
     words = []
+    for number in range(number_of_words):
+        keyrandom = random.randint(3,6)
+        valuerandom = random.randint(0,3)
+        words.append(my_dict[keyrandom][valuerandom])
+
+
 
     return " ".join(words)
 
@@ -261,6 +266,7 @@ def fast_filler(number_of_words=200) -> str:
     """
 
     fname = "dict_cache.json"
+    
 
     return None
 
