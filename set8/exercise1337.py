@@ -136,7 +136,7 @@ def fizz_buzz() -> list:
         elif i % 5 == 0:
             fizz_buzz_list.append("Buzz")
         else:
-            fizz_buzz_list.append((i))
+            fizz_buzz_list.append(i)
     # print(fizz_buzz_list)
 
     return fizz_buzz_list
@@ -171,9 +171,7 @@ def pet_filter(letter="a") -> List:
         "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"
     ]
 
-    filter = [x for x in pets if letter in x]
-    print(filter)
-    return filter
+    return [x for x in pets if letter in x]
 
 def best_letter_for_pets() -> str:
     """Return the letter that is present at least once in the most pet names.
@@ -186,7 +184,7 @@ def best_letter_for_pets() -> str:
     import string
 
     the_alphabet = string.ascii_lowercase
-    most_popular_letter = ""
+    most_popular_letter = 'e'
 
     return most_popular_letter
 
@@ -215,9 +213,17 @@ def make_filler_text_dictionary() -> Dict:
     (i.e. 3, 4, 5, 6, 7 and 4 words for each)
     TIP: you'll need the requests library
     """
+    i = 3
 
-    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
-    wd = {}
+    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
+
+    wd = {3: "a", 4: "b", 5: "c", 6: "d", 7: "e"}
+
+    while i == 3:
+        
+   
+
+
 
     return wd
 
