@@ -41,13 +41,19 @@ def password_please() -> str:
 
 def list_please() -> list:
     """Returns a list, you can put anything in the list."""
-
-    return None
+    list = []
+    for i in range(1, 10):
+        list.append(i)
+    return list
 
 
 def int_list_please() -> list:
     """Returns a list of integers, any integers are fine."""
-    return None
+    list2 = []
+    for i in range(1, 10):
+        list2.append(i)
+
+    return list2
 
 
 def string_list_please() -> list:
