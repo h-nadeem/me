@@ -41,10 +41,12 @@ def password_please() -> str:
 
 def list_please() -> list:
     """Returns a list, you can put anything in the list."""
-    list = []
+    list3 = []
     for i in range(1, 10):
-        list.append(i)
-    return list
+        list3.append(i)
+
+    print(list3)
+    return list3
 
 
 def int_list_please() -> list:
@@ -53,6 +55,7 @@ def int_list_please() -> list:
     for i in range(1, 10):
         list2.append(i)
 
+    print(list2)
     return list2
 
 
@@ -63,7 +66,11 @@ def string_list_please() -> list:
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return None
+    d = dict()
+    d["key"] = "pair"
+    d["x"] = 3
+    print(d)
+    return d
 
 
 def is_it_5(some_number) -> bool:
@@ -74,7 +81,9 @@ def is_it_5(some_number) -> bool:
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return None
+    x = some_number - int(5)
+    print(x)
+    return x
 
 
 def greet(name="Towering Timmy") -> str:
@@ -83,7 +92,7 @@ def greet(name="Towering Timmy") -> str:
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return None
+    return f"Well hello, {name.title()}"
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -91,7 +100,8 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
+    count = input_list.count(1)
+    print(count)
 
     return count
 
