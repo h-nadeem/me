@@ -265,11 +265,13 @@ def fast_filler(number_of_words=200) -> str:
     If you get this one to work, you are a Very Good Programmer™!
     """
     my_dict = make_filler_text_dictionary()
-
+    my_dict.upper()
+    
     with open("c:/Users/Nadeem/code1161/me/set8/dict_cache.json", "w") as f:
         f.write(str(my_dict))
-    
-    return   
+    file = ("c:/Users/Nadeem/code1161/me/set8/dict_cache.json", "r")
+    file.close()
+    return file   
 
 
 if __name__ == "__main__":

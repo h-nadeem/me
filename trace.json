@@ -354,15 +354,15 @@
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'NoneType' object has no attribute 'split'"
+        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
       },
       {
         "value": 0,
