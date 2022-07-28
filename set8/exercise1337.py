@@ -264,11 +264,12 @@ def fast_filler(number_of_words=200) -> str:
     it'll convert integer keys to strings.
     If you get this one to work, you are a Very Good Programmer™!
     """
+    my_dict = make_filler_text_dictionary()
 
-    fname = "dict_cache.json"
+    with open("c:/Users/Nadeem/code1161/me/set8/dict_cache.json", "w") as f:
+        f.write(str(my_dict))
     
-
-    return None
+    return   
 
 
 if __name__ == "__main__":
