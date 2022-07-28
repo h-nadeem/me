@@ -110,7 +110,8 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
+    count = input_list.count(search_for_this)
+    print(count)
 
     return count
 
