@@ -61,7 +61,8 @@ def int_list_please() -> list:
 
 def string_list_please() -> list:
     """Returns a list of strings, any string are fine."""
-    return None
+    my_string = ["hello", "ok"]
+    return my_string
 
 
 def dictionary_please() -> dict:
@@ -137,6 +138,17 @@ def fizz_buzz() -> List:
     fizz_buzz_list = []
     # your code here
 
+    for i in range(1, 101):  # 1 to 100 numbers
+        if i % 3 == 0 and i % 5 == 0:
+            fizz_buzz_list.append("Fizzbuzz")
+        elif i % 3 == 0:
+            fizz_buzz_list.append("Fizz")
+        elif i % 5 == 0:
+            fizz_buzz_list.append("Buzz")
+        else:
+            fizz_buzz_list.append((i))
+
+    print(fizz_buzz_list)
     return fizz_buzz_list
 
 
