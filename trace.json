@@ -230,7 +230,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 30,
+    "mark": 33,
     "results": [
       {
         "value": 1,
@@ -353,20 +353,20 @@
         "name": "\nrandom_filler_text:\n    given:    1000\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
+        "value": 1,
+        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      True"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
       },
       {
-        "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'dict' object has no attribute 'upper'"
+        "value": 1,
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      True"
       },
       {
-        "value": 0,
-        "name": "Timed out trying to run fast filler 10 times in 1 second, subsequent fast_filler probably wasn't fast enoughFunction <lambda> (args=()) (kwargs={}) timed out after 1.000000 seconds.\n"
+        "value": 1,
+        "name": "subsequent fast_filler"
       }
     ],
     "week_number": 8

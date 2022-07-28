@@ -288,6 +288,10 @@ def fast_filler(number_of_words=200) -> str:
         keyrandom = random.randint(3,6)
         valuerandom = random.randint(0,3)
         words.append(my_dict[str(keyrandom)][valuerandom])
+        for number in range(number_of_words-1):
+            keyrandom = random.randint(3,6)
+            valuerandom = random.randint(0,3)
+            words.append(my_dict[str(keyrandom)][valuerandom])
         finals = " ".join(words)
         finals = finals + "."
 
