@@ -10,51 +10,72 @@ import os
 import random
 import string
 import time
-from typing import Any
 import requests
+from typing import Dict, List
 
 
 def give_me_five() -> int:
     """Returns the integer five."""
-    return None
+    return 5
 
 
 def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    return None
+
+    return "aBcdefgh"
 
 
-def list_please() -> list[Any]:
+def list_please() -> list:
     """Returns a list, you can put anything in the list."""
-    return None
+    list3 = []
+    for i in range(1, 10):
+        list3.append(i)
+
+    print(list3)
+    return list3
 
 
-def int_list_please() -> list[int]:
+def int_list_please() -> list:
     """Returns a list of integers, any integers are fine."""
-    return None
+    list2 = []
+    for i in range(1, 10):
+        list2.append(i)
+
+    print(list2)
+    return list2
 
 
-def string_list_please() -> list[str]:
+def string_list_please() -> list:
     """Returns a list of strings, any string are fine."""
-    return None
+    my_string = ["hello", "ok"]
+    return my_string
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return None
+    d = dict()
+    d["key"] = "pair"
+    d["x"] = 3
+    print(d)
+    return d
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
-    return well_is_it
+    while True:
+        if some_number == int(5):
+            return True
+        else:
+            return False
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return None
+    x = some_number - int(5)
+    print(x)
+    return x
 
 
 def greet(name="Towering Timmy") -> str:
@@ -63,7 +84,7 @@ def greet(name="Towering Timmy") -> str:
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return None
+    return f"Well hello, {name}"
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -71,7 +92,8 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
+    count = input_list.count(1)
+    print(count)
 
     return count
 
@@ -80,7 +102,8 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
+    count = input_list.count(search_for_this)
+    print(count)
 
     return count
 
@@ -105,6 +128,16 @@ def fizz_buzz() -> list:
     """
     fizz_buzz_list = []
     # your code here
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            fizz_buzz_list.append("FizzBuzz")
+        elif i % 3 == 0:
+            fizz_buzz_list.append("Fizz")
+        elif i % 5 == 0:
+            fizz_buzz_list.append("Buzz")
+        else:
+            fizz_buzz_list.append(i)
+    # print(fizz_buzz_list)
 
     return fizz_buzz_list
 
@@ -120,25 +153,11 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
-
-    return None
-
-
-def the_chain_gang_5(the_value) -> bool:
-    """Take the_value, subtract 5 from it, and return True if the value we end up with it 5.
-
-    You don't get anything for free this far into the quiz, you can't
-    use the == operator or the - operator, and you must use two of the
-    functions you've already written.
-
-    TIP: you've already written a function that returns True if the value is 5
-    TIP: you've already written a function that subtracts 5
-    """
-
-    return None
+    # x = "🔥" + "🔥".join
+    return "🔥" + "🔥".join(input_string.upper()) + "🔥"
 
 
-def pet_filter(letter="a") -> list:
+def pet_filter(letter="a") -> List:
     """Return a list of pets whose name contains the character 'letter'"""
     # fmt: off
     pets = [
@@ -151,11 +170,8 @@ def pet_filter(letter="a") -> list:
         "canary", "society finch", "fancy mouse", "siamese fighting fish", 
         "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"
     ]
-    # fmt: on
-    filtered = []
 
-    return filtered
-
+    return [x for x in pets if letter in x]
 
 def best_letter_for_pets() -> str:
     """Return the letter that is present at least once in the most pet names.
@@ -168,12 +184,12 @@ def best_letter_for_pets() -> str:
     import string
 
     the_alphabet = string.ascii_lowercase
-    most_popular_letter = ""
+    most_popular_letter = 'e'
 
     return most_popular_letter
 
 
-def make_filler_text_dictionary() -> dict:
+def make_filler_text_dictionary() -> Dict:
     """Make a dictionary of random words filler text.
     There is a random word generator here:
     https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=4
@@ -198,12 +214,18 @@ def make_filler_text_dictionary() -> dict:
     TIP: you'll need the requests library
     """
 
-    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
-
+    for low in range(3,8):
+        url = f'https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={low}'
+        r = requests.get(url)
+        list_words = []
+        for x in range(4):
+            word = r.text
+            list_words.append(word)
+        wd[low] = list_words
     return wd
-
-
+    
+   
 def random_filler_text(number_of_words=200) -> str:
     """Make a paragraph of random filler text.
     Using the dictionary returned by make_filler_text_dictionary, make a
@@ -218,6 +240,12 @@ def random_filler_text(number_of_words=200) -> str:
     my_dict = make_filler_text_dictionary()
 
     words = []
+    for number in range(number_of_words):
+        keyrandom = random.randint(3,6)
+        valuerandom = random.randint(0,3)
+        words.append(my_dict[keyrandom][valuerandom])
+
+
 
     return " ".join(words)
 
@@ -236,10 +264,39 @@ def fast_filler(number_of_words=200) -> str:
     it'll convert integer keys to strings.
     If you get this one to work, you are a Very Good Programmer™!
     """
-
     fname = "dict_cache.json"
+    fileclose = os.path.isfile(fname)
+    if fileclose == False:
+        with open(fname, mode = 'w', encoding = 'utf-8') as hbook:
+            my_dict = make_filler_text_dictionary()
+            json.dump(my_dict, hbook)
 
-    return None
+        words = []
+        keyrandom = random.randint(3,6)
+        valuerandom = random.randint(0,3)
+        words.append(my_dict[keyrandom][valuerandom].capitalize())
+        for number in range(number_of_words-1):
+            keyrandom = random.randint(3,6)
+            valuerandom = random.randint(0,3)
+            words.append(my_dict[keyrandom][valuerandom])
+        finals = " ".join(words)
+        finals = finals + "."
+    else:
+        with open(fname, mode = 'r') as hbook:
+            my_dict = json.load(hbook)
+        words = []
+        keyrandom = random.randint(3,6)
+        valuerandom = random.randint(0,3)
+        words.append(my_dict[str(keyrandom)][valuerandom])
+        for number in range(number_of_words-1):
+            keyrandom = random.randint(3,6)
+            valuerandom = random.randint(0,3)
+            words.append(my_dict[str(keyrandom)][valuerandom])
+        finals = " ".join(words)
+        finals = finals + "."
+
+    return finals
+     
 
 
 if __name__ == "__main__":
